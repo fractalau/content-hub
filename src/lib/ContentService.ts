@@ -66,12 +66,12 @@ function slugFromPath(path: string): string {
   return path.split("/").pop()!.replace(/\.md$/, "");
 }
 
-function buildCollection<T extends Record<string, unknown>>(
+function buildCollection<T>(
   files: Record<string, string>,
 ): ContentItem<T>[] {
   return Object.entries(files).map(([path, raw]) => {
-    const { data, body } = parseFrontmatter<T>(raw);
-    return { slug: slugFromPath(path), path, data, body, raw };
+    const { data, body } = parseFrontmatter<Record<string, unknown>>(raw);
+    return { slug: slugFromPath(path), path, data: data as T, body, raw };
   });
 }
 
