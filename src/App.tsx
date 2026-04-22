@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound.tsx";
 import PostPage from "./pages/PostPage.tsx";
 import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
+import PageTemplate from "./components/PageTemplate.tsx";
 
 const queryClient = new QueryClient();
 
