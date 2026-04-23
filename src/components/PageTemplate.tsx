@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
 import SiteNav from "@/components/SiteNav";
 import NotFound from "@/pages/NotFound";
+import BlockRenderer, { type Block } from "@/components/BlockRenderer";
 import { getPage } from "@/lib/cms";
 
 // Raw glob list for debugging — confirms which page files Vite actually sees.
@@ -53,20 +53,8 @@ const PageTemplate = () => {
     return <NotFound />;
   }
 
-  const { data, content } = page;
-
-  let rendered: JSX.Element;
-  try {
-    rendered = <ReactMarkdown>{content}</ReactMarkdown>;
-  } catch (err) {
-    const message = err instanceof Error ? err.message : String(err);
-    console.error("[PageTemplate] Markdown render error:", err);
-    rendered = (
-      <div className="rounded-md bg-muted p-4 text-sm text-destructive">
-        Error rendering content: {message}
-      </div>
-    );
-  }
+  const { data } = page;
+  const blocks = (data as { blocks?: Block[] }).blocks;
 
   return (
     <>
@@ -75,9 +63,7 @@ const PageTemplate = () => {
         <header className="mb-8">
           <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
         </header>
-        <div className="prose prose-neutral max-w-none dark:prose-invert">
-          {rendered}
-        </div>
+        <BlockRenderer blocks={blocks} />
       </main>
     </>
   );
