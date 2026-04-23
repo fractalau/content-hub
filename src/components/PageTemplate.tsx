@@ -59,7 +59,7 @@ const PageTemplate = () => {
   return (
     <>
       <SiteNav />
-      <main className="container mx-auto max-w-3xl px-4 py-12">
+      <main className="w-full m-0 p-0">
         <header className="mb-8">
           <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
         </header>
