@@ -32,7 +32,7 @@ collections:
             fields:
               - { label: "Content", name: "content", widget: "markdown" }
               - { label: "Background Color", name: "bgColor", widget: "color", default: "#ffffff" }
-              - { label: "Full Width", name: "isFullWidth", widget: "boolean", default: false }
+              - { label: "Text Color", name: "textColor", widget: "color", default: "#000000" }
 
   - name: "posts"
     label: "Posts"

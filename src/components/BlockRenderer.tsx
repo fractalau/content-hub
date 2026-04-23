@@ -40,7 +40,7 @@ const BlockRenderer = ({ blocks }: BlockRendererProps) => {
                 key={key}
                 content={(block.content as string) ?? ""}
                 bgColor={block.bgColor as string | undefined}
-                isFullWidth={block.isFullWidth as boolean | undefined}
+                textColor={block.textColor as string | undefined}
               />
             );
           case "textSection":

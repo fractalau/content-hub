@@ -3,19 +3,17 @@ import ReactMarkdown from "react-markdown";
 interface WysiwygProps {
   content: string;
   bgColor?: string;
-  isFullWidth?: boolean;
+  textColor?: string;
 }
 
-const Wysiwyg = ({ content, bgColor = "#ffffff", isFullWidth = false }: WysiwygProps) => {
-  const markdown = (
-    <div className="prose prose-lg max-w-none">
-      <ReactMarkdown>{content}</ReactMarkdown>
-    </div>
-  );
-
+const Wysiwyg = ({ content, bgColor = "#ffffff", textColor = "#000000" }: WysiwygProps) => {
   return (
-    <section style={{ backgroundColor: bgColor }} className="py-12">
-      {isFullWidth ? markdown : <div className="container mx-auto">{markdown}</div>}
+    <section style={{ backgroundColor: bgColor, color: textColor }} className="py-12">
+      <div className="container mx-auto max-w-4xl px-6">
+        <div className="prose prose-lg max-w-none" style={{ color: textColor }}>
+          <ReactMarkdown>{content}</ReactMarkdown>
+        </div>
+      </div>
     </section>
   );
 };
