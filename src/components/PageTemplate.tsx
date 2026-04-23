@@ -57,11 +57,11 @@ const PageTemplate = () => {
       <SiteNav />
       <main className="w-full m-0 p-0">
         <section className="mb-8">
-          <container className="page-title">
-            <row>
+          <div className="page-title">
+            <div>
               <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
-            </row>
-          </container>
+            </div>
+          </div>
         </section>
         <BlockRenderer blocks={blocks} />
       </main>
