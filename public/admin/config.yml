@@ -20,7 +20,7 @@ collections:
         widget: "list"
         types:
           - label: "Hero Block"
-            name: "hero"
+            name: "Hero"
             widget: "object"
             fields:
               - { label: "Text", name: "text", widget: "markdown" }
