@@ -56,7 +56,7 @@ const PageTemplate = () => {
     <>
       <SiteNav />
       <main className="w-full m-0 p-0">
-        <section className="mb-8">
+        <section className="m-8">
           <div className="container mx-auto">
             <div className="flex flex-wrap -mx-4">
               <div className="w-full">
