@@ -7,8 +7,7 @@ import Wysiwyg from "@/components/blocks/Wysiwyg";
 // Decap CMS variable-type list items include a `type` field matching the
 // `name` of the block in config.yml.
 export interface Block {
-  type?: string;
-  block_type?: string;
+  type: string;
   [key: string]: unknown;
 }
 
@@ -22,9 +21,8 @@ const BlockRenderer = ({ blocks }: BlockRendererProps) => {
   return (
     <div className="main-content">
       {blocks.map((block, index) => {
-        const blockType = block.block_type ?? block.type;
-        const key = `${blockType}-${index}`;
-        switch (blockType) {
+        const key = `${block.type}-${index}`;
+        switch (block.type) {
           case "hero":
           case "Hero":
             return (
