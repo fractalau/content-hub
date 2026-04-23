@@ -25,7 +25,7 @@ const Hero = ({ text, bgImage, bgColor = "#ffffff", textColor }: HeroProps) => {
       <div className="relative z-10 container mx-auto py-12">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full">
-            <div className="text" style={{ color: resolvedTextColor, fontSize: "2em" }}>
+            <div className="prose max-w-none text" style={{ color: resolvedTextColor, fontSize: "2em" }}>
               <ReactMarkdown>{text}</ReactMarkdown>
             </div>
           </div>
