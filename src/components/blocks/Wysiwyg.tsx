@@ -15,7 +15,7 @@ const Wysiwyg = ({ content, bgColor = "#ffffff", isFullWidth = false }: WysiwygP
 
   return (
     <section style={{ backgroundColor: bgColor }} className="py-12">
-      {isFullWidth ? markdown : <div className="container mx-auto max-w-4xl px-6">{markdown}</div>}
+      {isFullWidth ? markdown : <div className="container mx-auto">{markdown}</div>}
     </section>
   );
 };
