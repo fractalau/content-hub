@@ -2,6 +2,7 @@ import Hero from "@/components/blocks/Hero";
 import TextSection from "@/components/blocks/TextSection";
 import ImageGallery from "@/components/blocks/ImageGallery";
 import CallToAction from "@/components/blocks/CallToAction";
+import Wysiwyg from "@/components/blocks/Wysiwyg";
 
 // Decap CMS variable-type list items include a `type` field matching the
 // `name` of the block in config.yml.
@@ -30,6 +31,16 @@ const BlockRenderer = ({ blocks }: BlockRendererProps) => {
                 text={(block.text as string) ?? ""}
                 bgImage={block.bgImage as string | undefined}
                 bgColor={block.bgColor as string | undefined}
+              />
+            );
+          case "wysiwyg":
+          case "Wysiwyg":
+            return (
+              <Wysiwyg
+                key={key}
+                content={(block.content as string) ?? ""}
+                bgColor={block.bgColor as string | undefined}
+                isFullWidth={block.isFullWidth as boolean | undefined}
               />
             );
           case "textSection":
