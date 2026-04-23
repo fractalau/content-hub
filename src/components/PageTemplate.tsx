@@ -58,8 +58,10 @@ const PageTemplate = () => {
       <main className="w-full m-0 p-0">
         <section className="mb-8">
           <div className="page-title">
-            <div>
-              <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
+            <div className="container">
+              <div className="row">
+                <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
+              </div>
             </div>
           </div>
         </section>
