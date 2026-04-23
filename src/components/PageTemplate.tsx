@@ -57,12 +57,10 @@ const PageTemplate = () => {
       <SiteNav />
       <main className="w-full m-0 p-0">
         <section className="mb-8">
-          <div className="page-title">
-            <div className="container">
-              <div className="row">
-                <div className="col-12">
-                  <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
-                </div>
+          <div className="container page-title">
+            <div className="row">
+              <div className="col-12">
+                <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
               </div>
             </div>
           </div>
