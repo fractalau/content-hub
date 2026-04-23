@@ -15,7 +15,37 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Blocks"
+        name: "blocks"
+        widget: "list"
+        types:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
+          - label: "Text Section"
+            name: "textSection"
+            widget: "object"
+            fields:
+              - { label: "Content", name: "content", widget: "markdown" }
+          - label: "Image Gallery"
+            name: "imageGallery"
+            widget: "object"
+            fields:
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                field: { label: "Image", name: "image", widget: "image" }
+          - label: "Call To Action"
+            name: "callToAction"
+            widget: "object"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
 
   - name: "posts"
     label: "Posts"
