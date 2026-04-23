@@ -38,12 +38,8 @@ const PageTemplate = () => {
       <>
         <SiteNav />
         <main className="container mx-auto max-w-3xl px-4 py-12">
-          <h1 className="text-2xl font-bold text-destructive">
-            Error loading page
-          </h1>
-          <pre className="mt-4 whitespace-pre-wrap rounded-md bg-muted p-4 text-sm">
-            {loadError.message}
-          </pre>
+          <h1 className="text-2xl font-bold text-destructive">Error loading page</h1>
+          <pre className="mt-4 whitespace-pre-wrap rounded-md bg-muted p-4 text-sm">{loadError.message}</pre>
         </main>
       </>
     );
@@ -61,7 +57,11 @@ const PageTemplate = () => {
       <SiteNav />
       <main className="w-full m-0 p-0">
         <section className="mb-8">
-          <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
+          <container className="page-title">
+            <row>
+              <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
+            </row>
+          </container>
         </section>
         <BlockRenderer blocks={blocks} />
       </main>
