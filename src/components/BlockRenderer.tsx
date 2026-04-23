@@ -31,6 +31,7 @@ const BlockRenderer = ({ blocks }: BlockRendererProps) => {
                 text={(block.text as string) ?? ""}
                 bgImage={block.bgImage as string | undefined}
                 bgColor={block.bgColor as string | undefined}
+                textColor={block.textColor as string | undefined}
               />
             );
           case "wysiwyg":
