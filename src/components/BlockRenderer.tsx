@@ -63,7 +63,7 @@ const BlockRenderer = ({ blocks }: BlockRendererProps) => {
               />
             );
           default:
-            console.warn("[BlockRenderer] Unknown block type:", block.type, block);
+            console.warn("[BlockRenderer] Unknown block type:", blockType, block);
             return null;
         }
       })}
