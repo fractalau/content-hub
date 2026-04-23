@@ -27,9 +27,9 @@ const BlockRenderer = ({ blocks }: BlockRendererProps) => {
             return (
               <Hero
                 key={key}
-                title={block.title as string}
-                subtitle={block.subtitle as string | undefined}
-                image={block.image as string | undefined}
+                text={(block.text as string) ?? ""}
+                bgImage={block.bgImage as string | undefined}
+                bgColor={block.bgColor as string | undefined}
               />
             );
           case "textSection":
