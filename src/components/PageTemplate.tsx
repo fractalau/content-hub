@@ -60,9 +60,9 @@ const PageTemplate = () => {
     <>
       <SiteNav />
       <main className="w-full m-0 p-0">
-        <header className="mb-8">
+        <section className="mb-8">
           <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
-        </header>
+        </section>
         <BlockRenderer blocks={blocks} />
       </main>
     </>
