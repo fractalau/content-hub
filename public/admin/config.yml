@@ -26,6 +26,13 @@ collections:
               - { label: "Text", name: "text", widget: "markdown" }
               - { label: "Background Image", name: "bgImage", widget: "image", required: false }
               - { label: "Background Color", name: "bgColor", widget: "color", default: "#ffffff" }
+          - label: "Text Block (Rich Text)"
+            name: "wysiwyg"
+            widget: "object"
+            fields:
+              - { label: "Content", name: "content", widget: "markdown" }
+              - { label: "Background Color", name: "bgColor", widget: "color", default: "#ffffff" }
+              - { label: "Full Width", name: "isFullWidth", widget: "boolean", default: false }
 
   - name: "posts"
     label: "Posts"
