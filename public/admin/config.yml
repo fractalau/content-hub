@@ -18,7 +18,6 @@ collections:
       - label: "Page Sections"
         name: "blocks"
         widget: "list"
-        typeKey: "block_type"
         types:
           - label: "Hero Block"
             name: "Hero"
