@@ -22,7 +22,7 @@ const Hero = ({ text, bgImage, bgColor = "#ffffff", textColor }: HeroProps) => {
     >
       {bgImage && <div aria-hidden className="absolute inset-0" style={{ backgroundColor: bgColor, opacity: 0.55 }} />}
 
-      <div className="relative z-10 container mx-auto py-12 sm:py-32 md:py-40">
+      <div className="relative z-10 container mx-auto py-12">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full">
             <div className="text" style={{ color: resolvedTextColor, fontSize: "2em" }}>
