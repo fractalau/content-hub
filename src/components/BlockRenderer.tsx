@@ -18,7 +18,7 @@ const BlockRenderer = ({ blocks }: BlockRendererProps) => {
   if (!blocks || blocks.length === 0) return null;
 
   return (
-    <div className="flex flex-col gap-12">
+    <div className="main-content">
       {blocks.map((block, index) => {
         const key = `${block.type}-${index}`;
         switch (block.type) {
@@ -34,17 +34,10 @@ const BlockRenderer = ({ blocks }: BlockRendererProps) => {
             );
           case "textSection":
           case "TextSection":
-            return (
-              <TextSection key={key} content={(block.content as string) ?? ""} />
-            );
+            return <TextSection key={key} content={(block.content as string) ?? ""} />;
           case "imageGallery":
           case "ImageGallery":
-            return (
-              <ImageGallery
-                key={key}
-                images={block.images as Array<string | { image: string }>}
-              />
-            );
+            return <ImageGallery key={key} images={block.images as Array<string | { image: string }>} />;
           case "callToAction":
           case "CallToAction":
             return (
