@@ -8,7 +8,7 @@ interface WysiwygProps {
 
 const Wysiwyg = ({ content, bgColor = "#ffffff", textColor = "#000000" }: WysiwygProps) => {
   return (
-    <section style={{ backgroundColor: bgColor, color: textColor }} className="py-12">
+    <section style={{ backgroundColor: bgColor, color: textColor }} className="relative overflow-hidden">
       <div className="container mx-auto py-12">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full">
