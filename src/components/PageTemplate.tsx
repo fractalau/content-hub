@@ -60,7 +60,9 @@ const PageTemplate = () => {
           <div className="page-title">
             <div className="container">
               <div className="row">
-                <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
+                <div className="col-12">
+                  <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
+                </div>
               </div>
             </div>
           </div>
