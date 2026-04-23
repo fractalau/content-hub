@@ -9,7 +9,7 @@ interface HeroProps {
 const Hero = ({ text, bgImage, bgColor = "#ffffff" }: HeroProps) => {
   return (
     <section
-      className="relative overflow-hidden rounded-2xl"
+      className="relative overflow-hidden"
       style={{
         backgroundColor: bgColor,
         backgroundImage: bgImage ? `url(${bgImage})` : undefined,
