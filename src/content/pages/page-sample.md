@@ -1,5 +1,5 @@
 ---
-title: Page Sample
+title: Sample Page
 blocks:
   - type: Hero
     bgColor: "#8e4040"
