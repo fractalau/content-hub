@@ -18,7 +18,7 @@ const Hero = ({ text, bgImage, bgColor = "#ffffff", textColor }: HeroProps) => {
   // For every 100px scrolled, move the bg image down 30px (parallax).
   const bgY = useTransform(scrollY, (value) => {
     const top = sectionRef.current?.offsetTop ?? 0;
-    return (value - top) * 0.3;
+    return (value - top) * 0.5;
   });
 
   return (
