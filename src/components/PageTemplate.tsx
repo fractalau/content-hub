@@ -57,9 +57,9 @@ const PageTemplate = () => {
       <SiteNav />
       <main className="w-full m-0 p-0">
         <section className="mb-8">
-          <div className="container page-title">
-            <div className="row">
-              <div className="col-12">
+          <div className="container mx-auto">
+            <div className="flex flex-wrap -mx-4">
+              <div className="w-full">
                 <h1 className="text-4xl font-bold tracking-tight">{data.title}</h1>
               </div>
             </div>
